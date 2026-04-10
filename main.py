@@ -1,7 +1,13 @@
 from konto import Konto
 from api import hämta_valutakurs
 import json
-konto = Konto()
+try:    
+    with open("data.json", "r") as f:
+        data = json.load(f)
+        saldo = data.get("saldo", 0)
+except:
+    saldo = 0
+konto = Konto(saldo)
 
 while True:
     print("1. Sätt in pengar")
