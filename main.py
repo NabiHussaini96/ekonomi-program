@@ -5,7 +5,7 @@ try:
     with open("data.json", "r") as f:
         data = json.load(f)
         saldo = data.get("saldo", 0)
-except:
+except FileNotFoundError:
     saldo = 0
 konto = Konto(saldo)
 
