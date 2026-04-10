@@ -3,13 +3,20 @@ from api import hämta_valutakurs
 import json
 konto = Konto()
 
-belopp = int(input("Hur mycket vill du sätta in? "))
-konto.sätt_in(belopp)
-kurs= hämta_valutakurs()
+print("1. Sätt in pengar")
+print("2. Ta ut pengar")
+print("3. Visa saldo")
 
-if kurs:
-    print ("Valutakurs USD till sek:", kurs)
-print("Saldo:", konto.visa_saldo())
+val = input("Välj: ")
+
+if val == "1":
+    belopp = int(input("hur mycket vill du sätta in? "))
+    konto.sätt_in(belopp)
+elif val == "2":
+    belopp = int(input("hur mycket vill du ta ut? "))
+    konto.ta_ut(belopp)
+elif val == "3":
+    print("Saldo:", konto.visa_saldo())
 
 data = {"saldo": konto.visa_saldo()}
 
