@@ -3,7 +3,8 @@ from api import hämta_valutakurs
 import json
 konto = Konto()
 
-konto.sätt_in(100)
+belopp = int(input("Hur mycket vill du sätta in? "))
+konto.sätt_in(belopp)
 kurs= hämta_valutakurs()
 
 if kurs:
