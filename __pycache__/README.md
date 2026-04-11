@@ -52,6 +52,5 @@ python main.py
 
 
 
-``´md
 ## Författare
 Nabi Hussaini
