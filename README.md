@@ -28,14 +28,14 @@ Alla ändringar sparas automatiskt.
 
 ## Installation & körning
 - Se till att Python är installerat
-- Installera paket: 
+### Installera paket: 
  ```bash
 pip install requests
-
-- Kör programmet:
+```
+### Kör programmet:
 ```bash
 python main.py
-
+```
 ## Filstruktur
 - main.py – huvudprogram
 - konto.py – klass för konto
